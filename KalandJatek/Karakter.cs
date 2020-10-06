@@ -8,7 +8,6 @@
         
 
 
-
         public Karakter(string nev, int milyenKepesseg)
         {
             this.nev = nev;
