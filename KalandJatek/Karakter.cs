@@ -5,6 +5,7 @@
         string nev;
         int eletEro;
         int sebzes;
+        
 
 
 
@@ -12,6 +13,7 @@
         {
             this.nev = nev;
             this.eletEro = 100;
+            
 
 
             if (milyenKepesseg == 0)
@@ -25,5 +27,10 @@
         public string Nev { get => nev; set => nev = value; }
         public int EletEro { get => eletEro; set => eletEro = value; }
         public int Sebzes { get => sebzes; set => sebzes = value; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} Életerő: {1} Sebzés: {2}", Nev, EletEro, Sebzes);
+        }
     }
 }
