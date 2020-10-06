@@ -39,29 +39,33 @@
             this.pic_char2 = new System.Windows.Forms.PictureBox();
             this.pic_char3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MenuPanel = new System.Windows.Forms.Panel();
             this.Btn_Battle = new System.Windows.Forms.Button();
             this.TxtBox_Name = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Név1 = new System.Windows.Forms.Label();
             this.Karakter1 = new System.Windows.Forms.PictureBox();
             this.Csata_Kar1 = new System.Windows.Forms.Panel();
             this.Csata_Kar2 = new System.Windows.Forms.Panel();
             this.BotKarakter = new System.Windows.Forms.PictureBox();
             this.Bothp = new System.Windows.Forms.Label();
+            this.HarcolGomb = new System.Windows.Forms.Button();
+            this.GyogyitGomb = new System.Windows.Forms.Button();
+            this.CsataPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_char2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_char3)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.MenuPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Karakter1)).BeginInit();
             this.Csata_Kar1.SuspendLayout();
             this.Csata_Kar2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotKarakter)).BeginInit();
+            this.CsataPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pic_char1
@@ -154,7 +158,7 @@
             // pic_char2
             // 
             this.pic_char2.BackColor = System.Drawing.Color.White;
-            this.pic_char2.Image = global::KalandJatek.Properties.Resources.Knight2L;
+            this.pic_char2.Image = ((System.Drawing.Image)(resources.GetObject("pic_char2.Image")));
             this.pic_char2.Location = new System.Drawing.Point(73, 57);
             this.pic_char2.Name = "pic_char2";
             this.pic_char2.Size = new System.Drawing.Size(50, 50);
@@ -187,24 +191,24 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Válassz karaktert:";
             // 
-            // panel1
+            // MenuPanel
             // 
-            this.panel1.Controls.Add(this.Btn_Battle);
-            this.panel1.Controls.Add(this.pic_char1);
-            this.panel1.Controls.Add(this.pic_char2);
-            this.panel1.Controls.Add(this.TxtBox_Name);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pic_char3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.radio_Heal);
-            this.panel1.Controls.Add(this.radio_Defense);
-            this.panel1.Controls.Add(this.radio_Freeze);
-            this.panel1.Location = new System.Drawing.Point(12, 172);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 417);
-            this.panel1.TabIndex = 11;
+            this.MenuPanel.Controls.Add(this.Btn_Battle);
+            this.MenuPanel.Controls.Add(this.pic_char1);
+            this.MenuPanel.Controls.Add(this.pic_char2);
+            this.MenuPanel.Controls.Add(this.TxtBox_Name);
+            this.MenuPanel.Controls.Add(this.label3);
+            this.MenuPanel.Controls.Add(this.pic_char3);
+            this.MenuPanel.Controls.Add(this.label2);
+            this.MenuPanel.Controls.Add(this.label4);
+            this.MenuPanel.Controls.Add(this.label1);
+            this.MenuPanel.Controls.Add(this.radio_Heal);
+            this.MenuPanel.Controls.Add(this.radio_Defense);
+            this.MenuPanel.Controls.Add(this.radio_Freeze);
+            this.MenuPanel.Location = new System.Drawing.Point(12, 172);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(200, 417);
+            this.MenuPanel.TabIndex = 11;
             // 
             // Btn_Battle
             // 
@@ -236,25 +240,15 @@
             this.panel2.Size = new System.Drawing.Size(185, 99);
             this.panel2.TabIndex = 12;
             // 
-            // label5
+            // label8
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(53, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Készítők:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(14, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Nyírő Marcell Csaba";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(14, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 20);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Németh Zsombor";
             // 
             // label7
             // 
@@ -266,15 +260,25 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Veres Márton";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(14, 74);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 20);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Németh Zsombor";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(14, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Nyírő Marcell Csaba";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(53, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Készítők:";
             // 
             // Név1
             // 
@@ -282,7 +286,7 @@
             this.Név1.BackColor = System.Drawing.SystemColors.Control;
             this.Név1.Font = new System.Drawing.Font("Montserrat", 15F);
             this.Név1.ForeColor = System.Drawing.Color.Black;
-            this.Név1.Location = new System.Drawing.Point(60, 12);
+            this.Név1.Location = new System.Drawing.Point(3, 12);
             this.Név1.Name = "Név1";
             this.Név1.Size = new System.Drawing.Size(79, 35);
             this.Név1.TabIndex = 13;
@@ -291,7 +295,6 @@
             // 
             // Karakter1
             // 
-            this.Karakter1.Image = ((System.Drawing.Image)(resources.GetObject("Karakter1.Image")));
             this.Karakter1.Location = new System.Drawing.Point(6, 62);
             this.Karakter1.Name = "Karakter1";
             this.Karakter1.Size = new System.Drawing.Size(191, 260);
@@ -321,7 +324,6 @@
             // 
             // BotKarakter
             // 
-            this.BotKarakter.Image = ((System.Drawing.Image)(resources.GetObject("BotKarakter.Image")));
             this.BotKarakter.Location = new System.Drawing.Point(6, 62);
             this.BotKarakter.Name = "BotKarakter";
             this.BotKarakter.Size = new System.Drawing.Size(191, 260);
@@ -335,12 +337,43 @@
             this.Bothp.BackColor = System.Drawing.SystemColors.Control;
             this.Bothp.Font = new System.Drawing.Font("Montserrat", 15F);
             this.Bothp.ForeColor = System.Drawing.Color.Black;
-            this.Bothp.Location = new System.Drawing.Point(49, 12);
+            this.Bothp.Location = new System.Drawing.Point(3, 12);
             this.Bothp.Name = "Bothp";
             this.Bothp.Size = new System.Drawing.Size(107, 35);
             this.Bothp.TabIndex = 13;
             this.Bothp.Text = "BOTHP";
             this.Bothp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HarcolGomb
+            // 
+            this.HarcolGomb.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.HarcolGomb.Location = new System.Drawing.Point(18, 19);
+            this.HarcolGomb.Name = "HarcolGomb";
+            this.HarcolGomb.Size = new System.Drawing.Size(110, 45);
+            this.HarcolGomb.TabIndex = 13;
+            this.HarcolGomb.Text = "HARCOL";
+            this.HarcolGomb.UseVisualStyleBackColor = true;
+            this.HarcolGomb.Click += new System.EventHandler(this.HarcolGomb_Click);
+            // 
+            // GyogyitGomb
+            // 
+            this.GyogyitGomb.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.GyogyitGomb.Location = new System.Drawing.Point(18, 73);
+            this.GyogyitGomb.Name = "GyogyitGomb";
+            this.GyogyitGomb.Size = new System.Drawing.Size(110, 45);
+            this.GyogyitGomb.TabIndex = 20;
+            this.GyogyitGomb.Text = "GYÓGYÍT";
+            this.GyogyitGomb.UseVisualStyleBackColor = true;
+            this.GyogyitGomb.Click += new System.EventHandler(this.GyogyitGomb_Click);
+            // 
+            // CsataPanel
+            // 
+            this.CsataPanel.Controls.Add(this.GyogyitGomb);
+            this.CsataPanel.Controls.Add(this.HarcolGomb);
+            this.CsataPanel.Location = new System.Drawing.Point(12, 450);
+            this.CsataPanel.Name = "CsataPanel";
+            this.CsataPanel.Size = new System.Drawing.Size(144, 140);
+            this.CsataPanel.TabIndex = 20;
             // 
             // Form1
             // 
@@ -349,10 +382,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1038, 601);
+            this.Controls.Add(this.CsataPanel);
             this.Controls.Add(this.Csata_Kar2);
             this.Controls.Add(this.Csata_Kar1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MenuPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -363,8 +397,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_char1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_char2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_char3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.MenuPanel.ResumeLayout(false);
+            this.MenuPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Karakter1)).EndInit();
@@ -373,6 +407,7 @@
             this.Csata_Kar2.ResumeLayout(false);
             this.Csata_Kar2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotKarakter)).EndInit();
+            this.CsataPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -389,7 +424,7 @@
         private System.Windows.Forms.PictureBox pic_char2;
         private System.Windows.Forms.PictureBox pic_char3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MenuPanel;
         private System.Windows.Forms.Button Btn_Battle;
         private System.Windows.Forms.TextBox TxtBox_Name;
         private System.Windows.Forms.Panel panel2;
@@ -403,6 +438,9 @@
         private System.Windows.Forms.Panel Csata_Kar2;
         private System.Windows.Forms.PictureBox BotKarakter;
         private System.Windows.Forms.Label Bothp;
+        private System.Windows.Forms.Button HarcolGomb;
+        private System.Windows.Forms.Button GyogyitGomb;
+        private System.Windows.Forms.Panel CsataPanel;
     }
 }
 

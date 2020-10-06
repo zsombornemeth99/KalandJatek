@@ -59,15 +59,5 @@ namespace KalandJatek.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Knight2L {
-            get {
-                object obj = ResourceManager.GetObject("Knight2L", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

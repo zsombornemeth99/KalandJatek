@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace KalandJatek
 {
@@ -41,8 +42,16 @@ namespace KalandJatek
 
         public void Megkuzd(Karakter masikHarcos)
         {
-            if (this.eletEro == 0 || masikHarcos.eletEro == 0)
-                MessageBox.Show("Hiba!");
+            if (this.eletEro <= 0 || masikHarcos.eletEro <= 0)
+                if (MessageBox.Show("Meghaltál\nMegpróbálod újra?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Form jatek = new Form1();
+
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
             else
             {
                 masikHarcos.eletEro -= this.Sebzes;
